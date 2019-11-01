@@ -1,0 +1,64 @@
+﻿@using TaskList.Models
+
+@model IEnumerable<TaskList.Models.Task>
+
+@{
+    ViewBag.Title = "Tasks";
+}
+
+<h>All Tasks</h>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>&nbsp;</th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>&nbsp;</th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompleteDate)
+        </th>
+        <th>&nbsp;</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Complete)
+        </th>
+        <th>
+            &nbsp;
+        </th>
+    </tr>
+
+    @foreach (Task item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                @if (item.Complete)
+                {
+                    @Html.DisplayFor(modelItem => item.CompleteDate)
+                }
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                @(item.Complete == true ? "Yes" : "No")
+            </td>
+            <td>
+                @Html.ActionLink("View", "View", new { id = item.ID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID },
+                    new { onclick = "return confirm('Are you sure you wish to delete this Task?');" })
+            </td>
+        </tr>
+    }
+</table>
+<br />
+
+@Html.ActionLink("Create Task", "Create")
