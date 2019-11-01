@@ -72,6 +72,7 @@ namespace TaskList.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(Task task)
         {
             Task temp = db.Tasks.FirstOrDefault(t => t.ID == task.ID);
@@ -90,5 +91,15 @@ namespace TaskList.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult View(int? id)
+        {
+            Task task = db.Tasks.FirstOrDefault(t => t.ID == id);
+
+            if (task == null)
+                return View("NotFound");
+
+            return View(task);
+        }
     }
 }

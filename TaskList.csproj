@@ -181,6 +181,8 @@
     <Content Include="Views\Task\About.cshtml" />
     <Content Include="Views\Task\Contact.cshtml" />
     <Content Include="Views\Task\Edit.cshtml" />
+    <Content Include="Views\Task\View.cshtml" />
+    <Content Include="Views\Task\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
