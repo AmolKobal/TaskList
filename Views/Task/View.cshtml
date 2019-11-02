@@ -5,44 +5,38 @@
 }
 
 <h2>View</h2>
-
+@Html.AntiForgeryToken()
 <div>
-    <h4>Task</h4>
+    <h4>Task - @Html.DisplayFor(model => model.Name)</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.StartDate)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.StartDate)
+            <br />
+            <br />
         </dd>
+        @if (Model.Complete)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.CompleteDate)
+            </dt>
+            <dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CompleteDate)
-        </dt>
-
-        <dd>
-            @if (Model.Complete)
-            {
                 @Html.DisplayFor(model => model.CompleteDate)
-            }         
-        </dd>
+                <br />
+                <br />
+            </dd>
+        }
 
         <dt>
             @Html.DisplayNameFor(model => model.Complete)
         </dt>
-
         <dd>
             @(Model.Complete == true ? "Yes" : "No")
+            <br />
         </dd>
 
     </dl>

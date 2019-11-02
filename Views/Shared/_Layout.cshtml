@@ -30,10 +30,14 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - @@mol kobal</p>
-        </footer>
     </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">
+                <p>&copy; @DateTime.Now.Year - @@mol kobal</p>
+            </span>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
