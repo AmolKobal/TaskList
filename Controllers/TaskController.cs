@@ -101,5 +101,21 @@ namespace TaskList.Controllers
 
             return View(task);
         }
+
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            Task task = db.Tasks.FirstOrDefault(t => t.ID == id);
+            if (task == null)
+                return View("NotFound");
+            else
+            {
+                db.Entry(task).State = System.Data.Entity.EntityState.Deleted;
+
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

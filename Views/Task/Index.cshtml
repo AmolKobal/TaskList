@@ -5,10 +5,12 @@
 @{
     ViewBag.Title = "Tasks";
 }
-<div>
-    <h>All Tasks</h>
+<br />
+<div class="container body-content">
+    <h3>All Tasks</h3>
 </div>
-<table>
+ 
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -26,7 +28,7 @@
             @Html.DisplayNameFor(model => model.Complete)
         </th>
         <th>
-            &nbsp;
+            Actions
         </th>
     </tr>
 
@@ -55,11 +57,14 @@
                 @Html.ActionLink("View", "View", new { id = item.ID }) |
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID },
-                    new { onclick = "return confirm('Are you sure you wish to delete this Task?');" })
+                          new { onclick = "return confirm('Are you sure you wish to delete this Task?');" })
+
             </td>
         </tr>
     }
 </table>
 <br />
-
-@Html.ActionLink("Create Task", "Create")
+<div class="navbar-header">
+    @Html.ActionLink("Create Task", "Create")
+</div>
+<br />
