@@ -30,6 +30,7 @@ namespace TaskList.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Task task)
         {
+            task.StartDate = DateTime.Now;
             task.CompleteDate = task.StartDate.AddDays(7);
             db.Tasks.Add(task);
             db.SaveChanges();
@@ -78,22 +79,36 @@ namespace TaskList.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Task task)
+        public ActionResult Edit(Task task, string Edit)
         {
-            Task temp = db.Tasks.FirstOrDefault(t => t.ID == task.ID);
-            if (temp != null)
+            if (task == null)
             {
-                temp.Name = task.Name;
-                temp.Complete = task.Complete;
-                if (task.Complete)
-                    task.CompleteDate = DateTime.Now;
-
-                db.Entry(temp).State = System.Data.Entity.EntityState.Modified;
-
-                db.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            return View("View", new { id = task.ID });
+            switch (Edit)
+            {
+                case "Update":
+
+                    Task temp = db.Tasks.FirstOrDefault(t => t.ID == task.ID);
+                    if (temp != null)
+                    {
+                        temp.Name = task.Name;
+                        temp.Complete = task.Complete;
+                        if (task.Complete)
+                            task.CompleteDate = DateTime.Now;
+
+                        db.Entry(temp).State = System.Data.Entity.EntityState.Modified;
+
+                        db.SaveChanges();
+                    }
+                    break;
+                case "Cancel":
+                    // Do Nothing
+                    break;
+            }
+
+            return RedirectToAction("View", new { id = task.ID });
         }
 
         [HttpGet]
@@ -126,7 +141,7 @@ namespace TaskList.Controllers
         [HttpGet]
         public ActionResult Cancel(Task task)
         {
-            return RedirectToAction("Index");
+            return RedirectToAction("View", task);
         }
     }
 }

@@ -14,13 +14,14 @@
         <div class="col-md-10">
             @Html.TextBoxFor(model => model.Name)
         </div>
+        <br />
     </div>
     <div class="form-group">
         @Html.LabelFor(model => model.StartDate, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-
-            @Html.LabelFor(model => model.StartDate)
+            @Html.ValueFor(model => model.StartDate)
         </div>
+        <br />
     </div>
 
     <div class="form-group">
@@ -28,12 +29,13 @@
         <div class="col-md-10">
             @Html.CheckBoxFor(model => model.Complete)
         </div>
+        <br />
     </div>
 
     <div class="col-md-offset-2 col-md-10">
-        <input type="submit" value="Update" class="btn btn-default" />
+        <input type="submit" value="Update" name="Edit" id="Update" class="btn btn-default" />
         &nbsp;
-        <input type="button" value="Cancel" class="btn btn-default" />
+        <input type="submit" value="Cancel" name="Edit" id="Cancel" class="btn btn-default" />
     </div>
 
 }
