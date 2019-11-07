@@ -62,6 +62,11 @@ namespace TaskList.Controllers
         [HttpGet]
         public ActionResult Edit(int? Id)
         {
+            if (Id == null)
+            {
+                return RedirectToAction("Index");
+            }
+
             Task task = db.Tasks.FirstOrDefault(t => t.ID == Id);
             if (task != null)
             {
@@ -88,7 +93,7 @@ namespace TaskList.Controllers
                 db.SaveChanges();
             }
 
-            return RedirectToAction("Index");
+            return View("View", new { id = task.ID });
         }
 
         [HttpGet]
@@ -115,6 +120,12 @@ namespace TaskList.Controllers
                 db.SaveChanges();
             }
 
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Cancel(Task task)
+        {
             return RedirectToAction("Index");
         }
     }
