@@ -48,6 +48,8 @@ C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\roslyn\vbc.rsp
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\roslyn\VBCSCompiler.exe
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\roslyn\VBCSCompiler.exe.config
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Antlr3.Runtime.dll
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.dll
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.SqlServer.dll
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Microsoft.Web.Infrastructure.dll
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Newtonsoft.Json.dll
@@ -59,6 +61,8 @@ C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.WebPages.Deploymen
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.WebPages.dll
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.WebPages.Razor.dll
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\WebGrease.dll
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.xml
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.SqlServer.xml
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.Helpers.xml
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.Mvc.xml
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.Optimization.xml
@@ -69,15 +73,10 @@ C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\System.Web.WebPages.Razor.xml
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Newtonsoft.Json.xml
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Antlr3.Runtime.pdb
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.csprojAssemblyReference.cache
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.Migrations.Initial.resources
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.Migrations.Update.resources
+C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.csproj.GenerateResource.cache
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.csproj.CoreCompileInputs.cache
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.csproj.CopyComplete
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.dll
 C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.pdb
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.dll
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.SqlServer.dll
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.xml
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\bin\EntityFramework.SqlServer.xml
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.Migrations.Initial.resources
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.csproj.GenerateResource.cache
-C:\MyData\Projects\DotNet\Web\ASP.NET\TaskList\obj\Debug\TaskList.Migrations.Update.resources

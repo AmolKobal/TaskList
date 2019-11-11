@@ -34,3 +34,7 @@ a:link {
 a.danger {
     color: red;
 }
+
+.completed {
+    background-color: lightgreen;
+}

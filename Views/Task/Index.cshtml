@@ -34,7 +34,7 @@
 
     @foreach (Task item in Model)
     {
-        <tr>
+        <tr style="@(item.Complete == true ? "background-color: lightgreen;" : "")">
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
